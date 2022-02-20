@@ -1,6 +1,14 @@
 <h1>My lists</h1>
 <ul>
-  <% @lists.each do |list|  %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
+  <div class="col">
+      <% @lists.each do |list|  %>
+        <div class="card mb-3">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.A_ELUNaPKsVbTfJzMOirtQFNC7%26pid%3DApi&f=1" class="card-img-top" alt="movie poster">
+          <div class="card-body">
+          <h5 class="card-title"><strong><%= link_to list.name, list_path(list) %></strong></h5>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      <% end %>
+  </div>
 </ul>
